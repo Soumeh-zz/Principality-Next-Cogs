@@ -1,0 +1,10 @@
+[project]
+name = "Counterpact Lobby"
+description = "Display a lobby preview for Counterpact."
+version = "1.0"
+authors = [
+    { name = "Soumeh" }
+]
+
+[tool.poetry.dependencies]
+cpact-watcher = { git = "https://github.com/Soumeh/Counterpact-Watcher.git" }
