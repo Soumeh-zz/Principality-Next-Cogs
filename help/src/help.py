@@ -1,4 +1,4 @@
-from cog import Cog, ConfigOption, SlashOption
+from principality.cog import  Cog, ConfigOption, SlashOption
 from nextcord import Embed
 
 class Help(Cog):

@@ -1,5 +1,5 @@
-from cog import Cog
-from utils import message_as_embed
+from principality.cog import  Cog
+from principality.utils import message_as_embed
 
 class Embed_Links(Cog):
 

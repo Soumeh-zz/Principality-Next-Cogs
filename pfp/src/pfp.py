@@ -1,4 +1,4 @@
-from cog import Cog, SlashOption
+from principality.cog import  Cog, SlashOption
 from nextcord import Embed, User
 
 class Profile_Picture(Cog):

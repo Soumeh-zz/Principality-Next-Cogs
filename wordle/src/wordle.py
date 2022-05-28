@@ -1,8 +1,8 @@
 import base64
 from random import choice
 from nextcord import ChannelType, Embed
-from cog import Cog, ConfigOption, SlashOption
-from utils import url_to_json
+from principality.cog import  Cog, ConfigOption, SlashOption
+from principality.utils import url_to_json
 
 class Wordle(Cog):
 

@@ -1,5 +1,5 @@
 from nextcord import Embed
-from cog import Cog, ConfigOption
+from principality.cog import  Cog, ConfigOption
 
 class Counterpact_Status(Cog):
 
