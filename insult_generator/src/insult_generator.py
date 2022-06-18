@@ -10,11 +10,11 @@ class Insult_Generator(Cog):
     ]
     
     insults = {
-        "noun": ['sigma', 'chungus', 'brat', 'swine', 'hog', 'nerd', 'weakling', 'dork', 'donkey', 'maggot', 'cretin', 'jerk', 'idiot', 'fool', 'butt', 'nerd', 'freak', 'buffoon', 'tool',
+        "noun": ['sigma', 'chungus', 'chair', 'brat', 'swine', 'hog', 'nerd', 'weakling', 'dork', 'donkey', 'maggot', 'cretin', 'jerk', 'idiot', 'fool', 'butt', 'nerd', 'freak', 'buffoon', 'tool',
         'dunce', 'blockhead', 'pinhead', 'chump', 'donkey', 'muppet'],
         "verb": ['kiss', 'kick', 'punch', 'hate'],
         "adjct": ['big', 'french', 'stupid', 'weak', 'dumb', 'fat', 'ugly', 'thick', 'daft', 'long', 'tiny', 'bumbling', 'absolute', 'darn'],
-        "location": ['church', 'hell', 'hole', 'toilet', 'basement']
+        "location": ['church', 'heck', 'hole', 'toilet', 'basement']
     }
     
     unsafe_patterns = [
@@ -24,18 +24,18 @@ class Insult_Generator(Cog):
     ]
 
     unsafe_insults = {
-        "noun": ['whore', 'cunt', 'hoe', 'simp', 'harlot', 'slut', 'pussy', 'retard', 'fuck', 'shit', 'ass', 'imbecile', 'asshole', 'turd', 'sucker', 'piss', 'bitch', 'tard', 'fuckhead', 'dick', 'cock', 'wanker'],
+        "noun": ['shitlips', 'whore', 'cunt', 'hoe', 'simp', 'harlot', 'slut', 'pussy', 'retard', 'fuck', 'shit', 'ass', 'imbecile', 'asshole', 'turd', 'sucker', 'piss', 'bitch', 'tard', 'fuckhead', 'dick', 'cock', 'wanker'],
         "verb": ['fuck', 'shit', 'kill', 'hang', 'pass', 'fist', 'piss', 'ram'],
         "adjct": ['retarded', 'motherfucking', 'girthy', 'slim', 'damn'],
         "disease": ['cancer', 'aids', 'gay', 'homo', 'syphilis', 'scurvy', 'the plague', 'ebola', 'tuberculosis', 'smallpox'],
-        "location": []
+        "location": ['hell']
     }
 
     unsafe_patterns.extend(patterns)
     for key, value in insults.items():
         unsafe_insults[key].extend(value)
 
-    @Cog.slash_command(guild_ids=[802577295960571907, 418105205100642315])
+    @Cog.slash_command(guild_ids=[802577295960571907, 418105205100642315, 964251827099033610])
     async def insult(self, ctx, 
         safe: bool = SlashOption(description="Whether or not to limit insult vocabulary to be PG-13.", default=True)
     ):

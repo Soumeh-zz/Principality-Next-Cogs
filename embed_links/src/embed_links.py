@@ -17,8 +17,10 @@ class Embed_Links(Cog):
                     except:
                         linked_message = None
                     if linked_message:
-                        embed = message_as_embed(linked_message)
-                        await message.reply(embed=embed)
+                        result = message_as_embed(linked_message)
+                        if isinstance(result, list):
+                            return await message.reply(embeds=result)
+                        await message.reply(embed=result)
     
     @Cog.message_command(name="Embed Message", guild_ids=[802577295960571907, 418105205100642315])
     async def embed_message(self, ctx, message):
