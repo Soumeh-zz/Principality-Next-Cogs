@@ -7,7 +7,7 @@ from principality.utils import url_to_json
 class Wordle(Cog):
 
     class Config:
-        words_url: ConfigOption('https://gist.githubusercontent.com/Soumeh/afea52493f79da710b79228e6ec7874e/raw/f10fa4d4f31a830005aa6101b38a3dfe994b99a9/wordle_words.json', str)
+        words_url: str = ConfigOption('https://gist.githubusercontent.com/Soumeh/afea52493f79da710b79228e6ec7874e/raw/f10fa4d4f31a830005aa6101b38a3dfe994b99a9/wordle_words.json')
 
     emoji_map = {}
     game_map = {}

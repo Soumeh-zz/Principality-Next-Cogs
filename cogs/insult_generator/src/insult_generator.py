@@ -6,11 +6,11 @@ class Insult_Generator(Cog):
     patterns = [
         'well played (noun)', 'you are (adjct) (noun)', 'you are (adjct) (noun)', 'eat a (noun) (noun)',
         'eat a (noun)', '(verb)', 'i will (verb) you', 'who is this (adjct) (noun)', 'go to (location) (noun)',
-        'you (adjct) (noun)', 'seek (noun)s', 'go to (location) and (verb)', '(adjct) (noun)', '(noun) grindset'
+        'you (adjct) (noun)', 'seek (noun)s', 'go to (location) and (verb)', '(adjct) (noun)'
     ]
     
     insults = {
-        "noun": ['sigma', 'chungus', 'chair', 'brat', 'swine', 'hog', 'nerd', 'weakling', 'dork', 'donkey', 'maggot', 'cretin', 'jerk', 'idiot', 'fool', 'butt', 'nerd', 'freak', 'buffoon', 'tool',
+        "noun": ['goober', 'chungus', 'chair', 'brat', 'swine', 'hog', 'nerd', 'weakling', 'dork', 'donkey', 'maggot', 'cretin', 'jerk', 'idiot', 'fool', 'butt', 'nerd', 'freak', 'buffoon', 'tool',
         'dunce', 'blockhead', 'pinhead', 'chump', 'donkey', 'muppet'],
         "verb": ['kiss', 'kick', 'punch', 'hate'],
         "adjct": ['big', 'french', 'stupid', 'weak', 'dumb', 'fat', 'ugly', 'thick', 'daft', 'long', 'tiny', 'bumbling', 'absolute', 'darn'],
@@ -35,7 +35,7 @@ class Insult_Generator(Cog):
     for key, value in insults.items():
         unsafe_insults[key].extend(value)
 
-    @Cog.slash_command(guild_ids=[802577295960571907, 418105205100642315, 964251827099033610])
+    @Cog.slash_command(guild_ids=[802577295960571907, 418105205100642315, 964251827099033610, 292703237755240448])
     async def insult(self, ctx, 
         safe: bool = SlashOption(description="Whether or not to limit insult vocabulary to be PG-13.", default=True)
     ):

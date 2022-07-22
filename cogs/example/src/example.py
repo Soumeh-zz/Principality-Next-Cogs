@@ -7,7 +7,7 @@ class Example(Cog):
     # self.folder - Returns the Path object of the folder containing this cog
 
     class Config:
-        is_true: ConfigOption(True, bool, description="Whether or not this value is true")
+        is_true: bool = ConfigOption(True, "Whether or not this value is true")
 
     def load(self):
         print('Loaded!')
