@@ -2,6 +2,6 @@ __pycache__/
 .venv
 .vscode/
 .tests/
-*/build/
-*/dist/
+*build/
+*dist/
 *.egg-info/
