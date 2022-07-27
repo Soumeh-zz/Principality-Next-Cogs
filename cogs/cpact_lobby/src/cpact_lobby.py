@@ -12,8 +12,7 @@ class Counterpact_Status(Cog):
         lobby_url: str = ConfigOption('', "The URL to fetch lobby data from. Currently, the Counterpact lobby's information is private, so you will have to ask The Developer for help. (Unless you are The Developer, in which case, you probably know what to do)")
 
     async def ready(self):
-        ip, port = lobby_url.split(':')
-        self.cpact_lobby = Counterpact_Lobby(ip, port)
+        self.cpact_lobby = Counterpact_Lobby(self.config.lobby_url)
 
     @Cog.slash_command()
     async def lobby(self, ctx):
