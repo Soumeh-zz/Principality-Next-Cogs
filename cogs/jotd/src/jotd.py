@@ -12,6 +12,5 @@ class Jester_Of_The_Day(Cog):
         await ctx.send(embed=Embed(description=f"**{ctx.guild.name}**'s Jester of the Day is {jester.mention}!"))
 
     def jester_of_the_day(self, server):
-        today = date.today()
-        seed(today)
+        seed(date.today())
         return choice(server.members)
