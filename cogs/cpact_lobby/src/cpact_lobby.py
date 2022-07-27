@@ -4,14 +4,14 @@ from principality.cog import  Cog, ConfigOption
 class Counterpact_Status(Cog):
 
     class Config:
-        lobby_ip: str = ConfigOption('', "The IP to fetch lobby data from. Currently, the Counterpact lobby's information is private, so you will have to ask the developer for help. (Unless you are the developer, in which case, you probably know what to do)")
-        lobby_port: int = ConfigOption(0, "Refer to comment above.")
+        lobby_url: str = ConfigOption('', "The URL to fetch lobby data from. Currently, the Counterpact lobby's information is private, so you will have to ask The Developer for help. (Unless you are The Developer, in which case, you probably know what to do)")
 
     def load(self):
         from cpact_watcher import Counterpact_Lobby
 
     async def ready(self):
-        self.cpact_lobby = Counterpact_Lobby(self.config.lobby_ip, self.config.lobby_port)
+        ip, port = lobby_url.split(':')
+        self.cpact_lobby = Counterpact_Lobby(ip, port)
 
     @Cog.slash_command()
     async def lobby(self, ctx):
