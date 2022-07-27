@@ -7,7 +7,7 @@ class Pixel(Cog):
     def load(self):
         from PIL import Image
 
-    async def attachment_to_image(self, attachment: Attachment) -> Image:
+    async def attachment_to_image(self, attachment: Attachment):
         return Image.open(BytesIO(await attachment.read(use_cached=True)))
 
     @Cog.slash_command()
