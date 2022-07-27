@@ -1,13 +1,14 @@
 from nextcord import Embed
 from principality.cog import  Cog, ConfigOption
 
-from cpact_watcher import Counterpact_Lobby
-
 class Counterpact_Status(Cog):
 
     class Config:
         lobby_ip: str = ConfigOption('', "The IP to fetch lobby data from. Currently, the Counterpact lobby's information is private, so you will have to ask the developer for help. (Unless you are the developer, in which case, you probably know what to do)")
         lobby_port: int = ConfigOption(0, "Refer to comment above.")
+
+    def load(self):
+        from cpact_watcher import Counterpact_Lobby
 
     async def ready(self):
         self.cpact_lobby = Counterpact_Lobby(self.config.lobby_ip, self.config.lobby_port)
