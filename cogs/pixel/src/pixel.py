@@ -2,10 +2,12 @@ from principality.cog import  Cog, SlashOption
 from nextcord import Embed, Attachment, File
 from io import BytesIO
 
-class Pixel(Cog):
+try:
+    from PIL import Image
+except ImportError:
+    pass
 
-    def load(self):
-        from PIL import Image
+class Pixel(Cog):
 
     async def attachment_to_image(self, attachment: Attachment):
         return Image.open(BytesIO(await attachment.read(use_cached=True)))
